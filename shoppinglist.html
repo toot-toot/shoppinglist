@@ -1,0 +1,33 @@
+<html>
+<body>
+<title>Shopping List</title>
+<h1>Shopping List</h1>
+<button id="additem" type=button onclick="addItem()">Add Item!</button>
+<button id="clearall" type=button onclick="clearAll()">Clear</button>
+<hr>
+<div id="shoppinglist"> 
+</div>
+<button id="printme" type="button" onclick="startPrint()">Print!</button>
+
+<script>
+function addItem() {
+    var shoppingItem = prompt("Type in something");
+    var para = document.createElement("p");
+    para.innerText = shoppingItem;
+    
+    var element = document.getElementById("shoppinglist");
+    element.appendChild(para);
+}
+
+function clearAll() {
+    var element = document.getElementById("shoppinglist");
+    while (element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
+}
+function startPrint() {
+    window.print();
+}
+</script>
+</body>
+</html>
