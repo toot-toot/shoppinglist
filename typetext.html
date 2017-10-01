@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>        
+<body>
+
+<title>TypeText</title>
+<div class="jumbotron text-center">
+<h1>TypeText</h1>
+</div>
+<hr>
+<strong>Write something in!</strong>
+
+<input type="text" id="myInput" oninput="myFunction()">
+
+<p id="demo">
+</p>
+
+<p>Then select Alert Me!</p>
+
+<button id="printme" class="btn btn-info" type=button onclick="doPrint()">Print!</button>		
+<script>
+function myFunction() {
+    var text = document.getElementById("myInput").value;
+    document.getElementById("demo").innerHTML = "You wrote: " + x;
+}
+
+function doPrint() {
+    window.print();
+}
+</script>
+
+<button id="alertme" type=button class="btn btn-success" onclick="alertMe()">Alert Me!</button>
+<script>
+function alertMe() {
+    var text = document.getElementById("myInput").value;
+    alert(text);
+}
+</script>
+<hr>
+</body>
+</html>
